@@ -4,36 +4,41 @@ import { Zap, Mail, Shield, FileText, Github, Linkedin, Twitter } from 'lucide-r
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+    <footer className="bg-gray-900 border-t border-gray-800 text-gray-300 pt-20 pb-32 relative overflow-hidden">
+      {/* Background Decorators */}
+      <div className="absolute top-0 left-1/4 w-64 h-64 bg-emerald-500/5 rounded-full blur-[80px]"></div>
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-[80px]"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-teal-600"></div>
+                <Zap className="w-6 h-6 text-white relative z-10" strokeWidth={2.5} />
               </div>
-              <span className="text-xl font-bold text-white">EchoWatt</span>
+              <span className="text-2xl font-extrabold text-white tracking-tight">EchoWatt</span>
             </div>
-            <p className="text-gray-400 mb-4">
-              Empowering Indian homes with intelligent energy management and carbon tracking.
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              Empowering homes with intelligent energy management, live tracking, and profound carbon reduction insights.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
+                className="w-12 h-12 bg-white/5 border border-white/10 hover:bg-emerald-500/20 hover:border-emerald-500/50 hover:text-emerald-400 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
+                className="w-12 h-12 bg-white/5 border border-white/10 hover:bg-emerald-500/20 hover:border-emerald-500/50 hover:text-emerald-400 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
+                className="w-12 h-12 bg-white/5 border border-white/10 hover:bg-emerald-500/20 hover:border-emerald-500/50 hover:text-emerald-400 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
               >
                 <Github className="w-5 h-5" />
               </a>
